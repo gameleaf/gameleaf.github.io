@@ -1,2 +1,3 @@
 # Website
-See: https://gameleaf.github.io/
+See: http://gameleaf.github.io/
+See: http://www.gameleaf.com/
