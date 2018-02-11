@@ -1,4 +1,10 @@
 # Website
-http://www.gameleaf.com/ is the same as http://gameleaf.github.io/
+http://www.gameleaf.com/
 
-The site is hosted at: https://github.com/gameleaf/gameleaf.github.io
+is hosted at
+
+http://gameleaf.github.io/
+
+The source code is at: 
+
+https://github.com/gameleaf/gameleaf.github.io
