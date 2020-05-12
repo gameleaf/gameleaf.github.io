@@ -1,4 +1,4 @@
-# GameLeaf.com Source Code
+# 🌱GameLeaf.com Source Code
 The website URL is:
 
     http://www.gameleaf.com/
@@ -36,3 +36,8 @@ git remote add bucket git@bitbucket.org:gameleaf/gameleaf.github.io.git
 git push --set-upstream bucket next-js-src:next-js-src
 git push bucket next-js-src:next-js-src
 ```
+
+# Other Info
+## Favicon
+* https://favicon.io/favicon-generator/
+* I chose the Alice font with a simple letter G.

@@ -45,8 +45,8 @@ function Page() {
                 */}
             </div>
 
-            <style jsx>{``}</style>
-            <style jsx global>{`
+            <style jsx global>{``}</style>
+            <style jsx>{`
                 html {
                     height: 100%;
                 }
