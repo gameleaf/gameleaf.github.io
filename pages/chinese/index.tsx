@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import * as Tone from "tone";
 
+
+
 function Page() {
+    let keysPressed = new Set();
     useEffect(() => {
         window.addEventListener("keydown", downHandler);
         window.addEventListener("keyup", upHandler);
@@ -13,27 +16,27 @@ function Page() {
         };
     }, []); // Empty array ensures that effect is only run on mount and unmount
 
-    function downHandler({ key }) {
-        console.log(`DN [${key}]`);
-        keysPressed.add(key);
-        console.log(keysPressed);
+    // key     = 3,      Meta
+    // keyCode = 51,     91
+    // code    = Digit3, MetaLeft
+    function downHandler(e) {
+        keysPressed.add(e.code);
+        setKeysPressedString([...keysPressed].join(",")); // Spread Operator!
     }
 
-    function upHandler({ key }) {
-        console.log(`UP [${key}]`);
-        keysPressed.delete(key);
-        console.log(keysPressed);
+    function upHandler(e) {
+        keysPressed.delete(e.code);
+        setKeysPressedString([...keysPressed].join(",")); // Spread Operator!
     }
 
-
-    const [keysPressed, setKeysPressed] = useState(new Set());
-
+    // Array of keys pressed
+    const [keysPressedString, setKeysPressedString] = useState("");
 
     return (
         <>
             <div className="grid">
                 <div className="item">
-                    <div className="text">年 {1}</div>
+                    <div className="text">年</div>
                 </div>
                 <div className="item">
                     <div className="text">天</div>
@@ -60,6 +63,7 @@ function Page() {
                     <div className="text">有</div>
                 </div>
             </div>
+            <div className="keys-pressed">Keys Pressed: [{keysPressedString}]</div>
             <style jsx>{`
                 .grid {
                     display: grid;
@@ -103,6 +107,12 @@ function Page() {
                     .grid {
                         margin-top: calc(50vmax - 50vmin);
                     }
+                }
+
+                .keys-pressed {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
                 }
             `}</style>
         </>
