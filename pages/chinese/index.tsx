@@ -1,44 +1,65 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import * as Tone from "tone";
 
 function Page() {
+    useEffect(() => {
+        window.addEventListener("keydown", downHandler);
+        window.addEventListener("keyup", upHandler);
+
+        // Remove event listeners on cleanup
+        return () => {
+            window.removeEventListener("keydown", downHandler);
+            window.removeEventListener("keyup", upHandler);
+        };
+    }, []); // Empty array ensures that effect is only run on mount and unmount
+
+    function downHandler({ key }) {
+        console.log(`DN [${key}]`);
+        keysPressed.add(key);
+        console.log(keysPressed);
+    }
+
+    function upHandler({ key }) {
+        console.log(`UP [${key}]`);
+        keysPressed.delete(key);
+        console.log(keysPressed);
+    }
+
+
+    const [keysPressed, setKeysPressed] = useState(new Set());
+
+
     return (
         <>
             <div className="grid">
                 <div className="item">
-                    <div className="text">Item 1</div>
+                    <div className="text">年 {1}</div>
                 </div>
                 <div className="item">
-                    <div className="text">Item 2</div>
+                    <div className="text">天</div>
                 </div>
                 <div className="item">
-                    <div className="text">Item 3</div>
+                    <div className="text">上</div>
                 </div>
                 <div className="item">
-                    <div className="text">Item 4</div>
+                    <div className="text">女</div>
                 </div>
                 <div className="item">
-                    <div className="text">Item 5</div>
+                    <div className="text"></div>
                 </div>
                 <div className="item">
-                    <div className="text">Item 6</div>
+                    <div className="text">小</div>
                 </div>
                 <div className="item">
-                    <div className="text">Item 7</div>
+                    <div className="text">大</div>
                 </div>
                 <div className="item">
-                    <div className="text">Item 8</div>
+                    <div className="text">鱼</div>
                 </div>
                 <div className="item">
-                    <div className="text">Item 9</div>
+                    <div className="text">有</div>
                 </div>
             </div>
-            <style jsx global>{`
-                * {
-                    margin: 0;
-                    padding: 0;
-                    box-sizing: border-box;
-                }
-            `}</style>
             <style jsx>{`
                 .grid {
                     display: grid;
@@ -56,6 +77,7 @@ function Page() {
 
                 .item {
                     background: rgba(0, 0, 0, 0.1);
+                    /* The next two lines make sure the .item is square. */
                     padding-top: 100%;
                     position: relative;
                 }
@@ -66,6 +88,7 @@ function Page() {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    font-size: 20vmin;
                 }
 
                 /* This query triggers when the webpage is WIDE. */
