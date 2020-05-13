@@ -4,20 +4,48 @@ function Page() {
     return (
         <>
             <div className="grid">
-                <div className="item"><div className="text">Item 1</div></div>
-                <div className="item"><div className="text">Item 2</div></div>
-                <div className="item"><div className="text">Item 3</div></div>
-                <div className="item"><div className="text">Item 4</div></div>
-                <div className="item"><div className="text">Item 5</div></div>
-                <div className="item"><div className="text">Item 6</div></div>
-                <div className="item"><div className="text">Item 7</div></div>
-                <div className="item"><div className="text">Item 8</div></div>
-                <div className="item"><div className="text">Item 9</div></div>
+                <div className="item">
+                    <div className="text">Item 1</div>
+                </div>
+                <div className="item">
+                    <div className="text">Item 2</div>
+                </div>
+                <div className="item">
+                    <div className="text">Item 3</div>
+                </div>
+                <div className="item">
+                    <div className="text">Item 4</div>
+                </div>
+                <div className="item">
+                    <div className="text">Item 5</div>
+                </div>
+                <div className="item">
+                    <div className="text">Item 6</div>
+                </div>
+                <div className="item">
+                    <div className="text">Item 7</div>
+                </div>
+                <div className="item">
+                    <div className="text">Item 8</div>
+                </div>
+                <div className="item">
+                    <div className="text">Item 9</div>
+                </div>
             </div>
+            <style jsx global>{`
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+            `}</style>
             <style jsx>{`
                 .grid {
-                    border: 1px solid red;
                     display: grid;
+                    width: 100vmin;
+                    height: 100vmin;
+                    background: red;
+                    margin: 0 auto;
                     grid-gap: 5%;
                     gap: 5%;
                     grid-template-areas:
@@ -28,7 +56,6 @@ function Page() {
 
                 .item {
                     background: rgba(0, 0, 0, 0.1);
-                    border: 1px white blue;
                     padding-top: 100%;
                     position: relative;
                 }
@@ -39,6 +66,20 @@ function Page() {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                }
+
+                /* This query triggers when the webpage is WIDE. */
+                @media only screen and (min-width: 100vmax) {
+                    .grid {
+                        margin-top: 0;
+                    }
+                }
+
+                /* This query triggers when the webpage is TALL. */
+                @media only screen and (min-height: 100vmax) {
+                    .grid {
+                        margin-top: calc(50vmax - 50vmin);
+                    }
                 }
             `}</style>
         </>

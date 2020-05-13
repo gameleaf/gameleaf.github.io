@@ -1,0 +1,2 @@
+# TODOs
+- [x] Figure out how to fix the red box's margin-top such that it works for both wide pages and tall pages. The solution is to use @media queries with vmax (which is the viewport's longer side).
