@@ -1,4 +1,5 @@
 # TODOs
+- [ ] Fix the Home Page. Make it simple and work on iPhones, Androids, and Desktop.
 - [ ] Integrate Stripe. Try to figure out a way to purchase a "lifetime membership" to GameLeaf learning games for $10. https://dev.to/stripe/type-safe-payments-with-next-js-typescript-and-stripe-4jo7
 - [ ] x
 - [ ] x

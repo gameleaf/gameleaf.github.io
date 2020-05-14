@@ -1,8 +1,17 @@
 import { AppProps } from "next/app";
-import "../styles/global.css";
+import theme from "../styles/theme";
 
 function App({ Component, pageProps }: AppProps) {
-    return <Component {...pageProps} />;
+    return (
+        <>
+            <Component {...pageProps} />
+            <style jsx global>{`
+            * {
+                ${theme.layoutReset}
+            }
+            `}</style>
+        </>
+    );
 }
 
 export default App;
