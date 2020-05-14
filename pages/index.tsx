@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import theme from "../styles/theme";
+import theme from "../styles/Theme";
 
 function Page() {
     return (

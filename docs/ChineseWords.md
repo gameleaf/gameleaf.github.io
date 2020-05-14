@@ -7,7 +7,7 @@
 看 kàn
 好 hǎo
 水 shuǐ
-鱼 yú
+鱼 / 魚 yú
 头 tóu
 手 shǒu
 老 lǎo

@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
-import * as Tone from "tone";
+import Head from "next/head";
 
-
+import Theme from "../../styles/Theme";
+import ChineseFonts from "./ChineseFonts";
+import WordDB from "./WordDB";
 
 function Page() {
     let keysPressed = new Set();
+    let words = new Array();
+
     useEffect(() => {
         window.addEventListener("keydown", downHandler);
         window.addEventListener("keyup", upHandler);
@@ -34,6 +38,9 @@ function Page() {
 
     return (
         <>
+            <Head>
+                <script src="/s/j/load-font-sans.js"></script>
+            </Head>
             <div className="grid">
                 <div className="item">
                     <div className="text">年</div>
@@ -48,7 +55,7 @@ function Page() {
                     <div className="text">女</div>
                 </div>
                 <div className="item">
-                    <div className="text"></div>
+                    <div className="text">🐟</div>
                 </div>
                 <div className="item">
                     <div className="text">小</div>
@@ -80,18 +87,18 @@ function Page() {
                 }
 
                 .item {
-                    background: rgba(0, 0, 0, 0.1);
+                    background: rgba(0, 0, 0, 0.07);
                     /* The next two lines make sure the .item is square. */
                     padding-top: 100%;
                     position: relative;
                 }
 
                 .text {
-                    border: 1px solid green;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    ${ChineseFonts.getCSSForSans()}
                     font-size: 20vmin;
                 }
 
