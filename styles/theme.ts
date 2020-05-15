@@ -1,23 +1,21 @@
 /* Shared styles for our site. */
-class Theme {
+const theme = {
     /* Reset the layout for all pages. */
-    public static layoutReset: `
+    layoutReset: `
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    `;
+    `,
 
-    public static body: {
+    body: {
         fontFamily: {
             system: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-            "Segoe UI Symbol"`;
-            gameleafLogo: `"Roboto Slab"`;
-        };
-    };
+            "Segoe UI Symbol"`,
+            gameleafLogo: `"Roboto Slab"`,
+        },
+    },
 
-    public static getDebugBorder() {
-        return `border: 1px solid #000000;`;
-    }
-}
+    debugBorder: `border: 1px solid #000000;`,
+};
 
-export default Theme;
+export default theme;

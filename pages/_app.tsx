@@ -1,5 +1,5 @@
 import { AppProps } from "next/app";
-import Theme from "../styles/Theme";
+import theme from "../styles/theme";
 
 function App({ Component, pageProps }: AppProps) {
     return (
@@ -7,7 +7,7 @@ function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
             <style jsx global>{`
                 * {
-                    ${Theme.layoutReset}
+                    ${theme.layoutReset}
                 }
             `}</style>
         </>

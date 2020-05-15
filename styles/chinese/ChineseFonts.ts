@@ -1,5 +1,5 @@
 // Stick this code into a <script></script> tag to load the font: Source Han Sans (Traditional).
-class ChineseFonts {
+export class ChineseFonts {
     /*
     Source Han Sans Light
         font-family: source-han-sans-traditional, sans-serif;
@@ -39,5 +39,3 @@ class ChineseFonts {
         `;
     }
 }
-
-export default ChineseFonts;

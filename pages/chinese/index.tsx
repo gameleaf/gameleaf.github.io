@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 
-import Theme from "../../styles/Theme";
-import ChineseFonts from "./ChineseFonts";
-import WordDB from "./WordDB";
+import theme from "../../styles/theme";
+import { ChineseFonts } from "../../styles/chinese/ChineseFonts";
+import { WordDB } from "../../data/WordDB";
 
 function Page() {
     let keysPressed = new Set();

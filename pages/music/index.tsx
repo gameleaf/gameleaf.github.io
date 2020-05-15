@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Tone from "tone";
+import * as Tone from "tone";
 
 let synth = null;
 

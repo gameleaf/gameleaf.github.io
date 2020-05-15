@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-import theme from "../styles/Theme";
+import theme from "../styles/theme";
 
-function Page() {
+export default function Page() {
     return (
         <>
             <Head>
@@ -48,5 +48,3 @@ function Page() {
 Chinese Pop – Learn Chinese Characters with a Matching Game
 Find Words Together – Word Search with a Twist
 */
-
-export default Page;
