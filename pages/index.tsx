@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import theme from "../styles/theme";
+import { theme } from "../styles/theme";
 
 export default function Page() {
     return (
@@ -13,30 +13,44 @@ export default function Page() {
             </Head>
             <div className="centered">
                 <div className="title">GameLeaf</div>
+                <div className="leaf"></div>
             </div>
             <style jsx>{`
                 .centered {
                     font-family: ${theme.body.fontFamily.gameleafLogo}, ${theme.body.fontFamily.system};
                     background-color: #fcfcfb;
                     color: #666;
-                    position: absolute;
+                    position: fixed;
                     top: 0;
                     left: 0;
                     right: 0;
                     bottom: 0;
                     text-align: center;
+                    border: 2px solid green;
+                    z-index: 0;
+                }
 
+                .title {
+                    position: absolute;
+                    font-size: max(8vh, 40px);
+                    margin: 45vh 50vw;
+                    transform: translate(-50%, -50%);
+                    z-index: 2;
+                }
+
+                .leaf {
+                    opacity: .45;
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
                     background-image: url("/s/i/leaf.svg");
                     background-repeat: no-repeat;
                     background-attachment: fixed;
                     background-size: contain;
                     background-position: center;
-                }
-
-                .title {
-                    font-size: max(8vh, 40px);
-                    margin: 45vh 0;
-                    transform: translate(0, -50%);
+                    z-index: 1;
                 }
             `}</style>
         </>

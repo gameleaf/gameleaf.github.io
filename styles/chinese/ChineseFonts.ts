@@ -1,5 +1,5 @@
 // Stick this code into a <script></script> tag to load the font: Source Han Sans (Traditional).
-export class ChineseFonts {
+export const chineseFonts = {
     /*
     Source Han Sans Light
         font-family: source-han-sans-traditional, sans-serif;
@@ -23,19 +23,13 @@ export class ChineseFonts {
 
     */
 
-    public static getCSSForSans() {
-        return `
+    cssForSans: `
             font-family: source-han-sans-traditional, sans-serif;
             font-weight: 200;
-            font-style: normal;
-        `;
-    }
+            font-style: normal;`,
 
-    public static getCSSForSerif() {
-        return `
+    cssForSerif: `
             font-family: source-han-serif-tc, serif;
             font-weight: 300;
-            font-style: normal;
-        `;
-    }
-}
+            font-style: normal;`,
+};

@@ -1,5 +1,5 @@
 /* Shared styles for our site. */
-const theme = {
+export const theme = {
     /* Reset the layout for all pages. */
     layoutReset: `
         margin: 0;
@@ -17,5 +17,3 @@ const theme = {
 
     debugBorder: `border: 1px solid #000000;`,
 };
-
-export default theme;
