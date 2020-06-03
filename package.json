@@ -1,16 +1,19 @@
 {
     "name": "gameleaf.com",
     "version": "1.0.0",
+    "description": "This repo hosts the GameLeaf.com website. Everything in this repo is [MIT Licensed](LICENSE). Enjoy!",
     "private": true,
     "scripts": {
         "dev": "next dev -p 4000",
         "build": "next build && next export -o 'www'",
         "start": "next start"
     },
+    "author": "Ron B. Yeh",
+    "license": "MIT",
     "dependencies": {
-        "next": "9.4.0",
-        "react": "16.13.1",
-        "react-dom": "16.13.1",
+        "next": "^9.4.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
         "tone": "^13.8.25"
     },
     "devDependencies": {
