@@ -8,8 +8,8 @@ import glob from "glob";
 import { GetStaticProps, GetStaticPaths } from "next";
 import PostsDB from "data/postsDB";
 
-console.log("Create Posts DB for Blog");
-const db = new PostsDB("blog");
+console.log("Create Posts DB for Camp");
+const db = new PostsDB("camp");
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // Runs only on the server side, at build time.
@@ -45,7 +45,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // This data will be baked into the files that we prerender via Next.js.
 export const getStaticProps: GetStaticProps = async (context) => {
     const params = context.params;
-    const urlPath: string = params.id as string;
+    const urlPath:string = params.id as string;
     const filePath = db.getFilePathForURLPath(urlPath);
     const content = fs.readFileSync(filePath, "utf8");
     const markdown = matter(content);

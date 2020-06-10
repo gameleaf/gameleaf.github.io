@@ -6,8 +6,8 @@ tags:
     - react
     - next-js
     - programming
-date: "2020-06-04"
-time: 23:37
+original: "2020-06-04"
+update: "2020-06-09"
 ---
 
 # Creating a Markdown Blog with Next.js
