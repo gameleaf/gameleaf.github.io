@@ -1,10 +1,6 @@
 import React from "react";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/router";
-import glob from "glob";
 import { GetStaticProps, GetStaticPaths } from "next";
 import PostsDB from "data/postsDB";
 
@@ -15,28 +11,7 @@ const db = new PostsDB("camp");
 // Runs only on the server side, at build time.
 // Figure out all the paths Next.js will pre-render.
 export const getStaticPaths: GetStaticPaths = async () => {
-    const urlPaths = db.getAllURLPaths();
-
-    // Next.js expects the results to be in a particular format.
-    // {
-    //     paths: [
-    //         { params: { id: 'page-1-path' } },
-    //         { params: { id: 'page-2-path' } }
-    //     ],
-    //     fallback: ...
-    // }
-    const nextJSURLPaths = urlPaths.map((urlPath) => {
-        return {
-            params: {
-                id: urlPath,
-            },
-        };
-    });
-
-    return {
-        paths: nextJSURLPaths,
-        fallback: false,
-    };
+    return db.getStaticPathsForNextJS();
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -44,18 +19,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // Determine the data that will be served to each URL path.
 // This data will be baked into the files that we prerender via Next.js.
 export const getStaticProps: GetStaticProps = async (context) => {
-    const params = context.params;
-    const urlPath:string = params.id as string;
-    const filePath = db.getFilePathForURLPath(urlPath);
-    const content = fs.readFileSync(filePath, "utf8");
-    const markdown = matter(content);
-    return {
-        props: {
-            id: params.id,
-            frontmatter: markdown.data,
-            body: markdown.content,
-        },
-    };
+    return db.getStaticPropsForNextJS(context);
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////

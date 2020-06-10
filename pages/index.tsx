@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { theme } from "../styles/theme";
 
-export default function Page() {
+export default () => {
     return (
         <>
             <Head>
@@ -39,7 +39,7 @@ export default function Page() {
                 }
 
                 .leaf {
-                    opacity: .45;
+                    opacity: 0.45;
                     position: fixed;
                     top: 0;
                     bottom: 0;
@@ -55,7 +55,7 @@ export default function Page() {
             `}</style>
         </>
     );
-}
+};
 
 /*
 <a href="https://www.pianouniversity.com/">Piano University</a>
