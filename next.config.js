@@ -4,9 +4,9 @@ module.exports = {
     devIndicators: {
         autoPrerender: false,
     },
-    experimental: {
-        jsconfigPaths: true, // enables it for both jsconfig.json and tsconfig.json
-    },
+    // experimental: {
+    //     jsconfigPaths: true,
+    // },
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
         config.module.rules.push({
             test: /\.md$/,

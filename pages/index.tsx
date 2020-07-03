@@ -26,7 +26,6 @@ export default () => {
                     right: 0;
                     bottom: 0;
                     text-align: center;
-                    border: 2px solid green;
                     z-index: 0;
                 }
 
