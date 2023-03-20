@@ -1,7 +1,7 @@
 # 🌱GameLeaf.com Source Code
 The website URL is:
 
-    http://www.gameleaf.com/
+    https://www.gameleaf.com/
 
 It's hosted on GitHub pages at:
 
