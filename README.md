@@ -5,7 +5,7 @@ The website URL is:
 
 It's hosted on GitHub pages at:
 
-    http://gameleaf.github.io/
+    https://gameleaf.github.io/
 
 The source code is at: 
 
