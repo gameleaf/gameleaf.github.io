@@ -1,7 +1,5 @@
 # 🌱GameLeaf.com Source Code
-The website URL is:
-
-    https://www.gameleaf.com/
+This used to be the source code for gameleaf.com, but now it's just a separate GitHub pages.
 
 It's hosted on GitHub pages at:
 
@@ -11,7 +9,7 @@ The source code is at:
 
     https://github.com/gameleaf/gameleaf.github.io/tree/next-js-src
 
-The GameLeaf.com website and all our code served from gameleaf.github.io is [MIT Licensed](https://raw.githubusercontent.com/gameleaf/gameleaf.github.io/next-js-src/LICENSE). Enjoy!
+All code served from gameleaf.github.io is [MIT Licensed](https://raw.githubusercontent.com/gameleaf/gameleaf.github.io/next-js-src/LICENSE). Enjoy!
 
 
 

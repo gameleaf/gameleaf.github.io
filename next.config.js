@@ -1,17 +1,17 @@
+const { type } = require("os");
+
 module.exports = {
-    poweredByHeader: false,
-    exportTrailingSlash: true,
-    devIndicators: {
-        autoPrerender: false,
-    },
-    // experimental: {
-    //     jsconfigPaths: true,
-    // },
-    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-        config.module.rules.push({
-            test: /\.md$/,
-            use: "raw-loader",
-        });
-        return config; // Important: return the modified config
-    },
+  poweredByHeader: false,
+  trailingSlash: true,
+  devIndicators: {
+    autoPrerender: false,
+  },
+  turbopack: {},
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.module.rules.push({
+      test: /\.md$/,
+      type: "asset/source",
+    });
+    return config; // Important: return the modified config
+  },
 };

@@ -1,6 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
 import { theme } from "../styles/theme";
+import { Roboto_Slab } from "next/font/google";
+
+const robotoSlab = Roboto_Slab({
+    subsets: ["latin"],
+    weight: ["400"],
+});
 
 export default () => {
     return (
@@ -9,11 +15,10 @@ export default () => {
                 <title>GameLeaf</title>
                 <meta name="description" content="GameLeaf, Inc." />
                 <meta name="author" content="Ron B. Yeh" />
-                <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400" rel="stylesheet" />
             </Head>
             <div className="centered">
                 <div className="title">GameLeaf</div>
-                <div className="leaf"></div>
+                {/* <div className="leaf"></div> */}
             </div>
             <style jsx>{`
                 .centered {

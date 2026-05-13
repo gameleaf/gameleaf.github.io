@@ -1,29 +1,29 @@
 {
-    "name": "gameleaf.com",
-    "version": "1.0.0",
-    "description": "This repo hosts the GameLeaf.com website. Everything in this repo is [MIT Licensed](LICENSE). Enjoy!",
-    "private": true,
-    "scripts": {
-        "dev": "next dev -p 4000",
-        "build": "next build && next export -o 'www'",
-        "start": "next start"
-    },
-    "author": "Ron B. Yeh",
-    "license": "MIT",
-    "dependencies": {
-        "@types/node": "14.0.13",
-        "@types/react": "16.9.35",
-        "chalk": "4.1.0",
-        "glob": "^9.3.0",
-        "gray-matter": "4.0.2",
-        "next": "9.4.4",
-        "phaser": "3.23.0",
-        "raw-loader": "4.0.1",
-        "react": "16.13.1",
-        "react-dom": "16.13.1",
-        "react-markdown": "4.3.1",
-        "tone": "^14.7.12",
-        "typescript": "3.9.5",
-        "webpack": "^5.76.2"
-    }
+  "name": "gameleaf.com",
+  "version": "1.0.0",
+  "description": "This repo hosts the GameLeaf.com website. Everything in this repo is [MIT Licensed](LICENSE). Enjoy!",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 4000",
+    "build": "next build && next export -o 'www'",
+    "start": "next start"
+  },
+  "author": "Ron B. Yeh",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "14.0.13",
+    "@types/react": "16.9.35",
+    "chalk": "4.1.0",
+    "glob": "^9.3.0",
+    "gray-matter": "4.0.2",
+    "next": "^16.2.6",
+    "phaser": "3.23.0",
+    "raw-loader": "4.0.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-markdown": "4.3.1",
+    "tone": "^14.7.12",
+    "typescript": "^6.0.3",
+    "webpack": "^5.76.2"
+  }
 }
